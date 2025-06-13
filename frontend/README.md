@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# 📝 Aplicação CRUD de Tarefas (To-Do)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um sistema simples de gerenciamento de tarefas (To-Do), desenvolvido como exemplo de uma aplicação **CRUD** (Create, Read, Update, Delete), integrando as tecnologias **Java 21 com Spring Boot** no backend e **React.js** no frontend.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Funcionalidades
 
-### `npm start`
+- ✅ Adicionar novas tarefas  
+- 📋 Listar todas as tarefas  
+- ✏️ Editar tarefas existentes  
+- 🗑️ Excluir tarefas  
+- ✔️ Marcar tarefas como concluídas  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm test`
+### Backend
+- Java 21  
+- Spring Boot 3  
+- Spring Data JPA  
+- H2 Database (em memória)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- React.js  
+- Axios (para comunicação com a API)  
+- HTML5 / CSS3  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Como Executar o Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- JDK 21 ou superior  
+- Maven  
+- Node.js (versão LTS recomendada)  
+- NPM ou Yarn  
 
-### `npm run eject`
+### Passo a passo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone o repositório:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone [URL_DO_REPOSITORIO]
+cd nome-do-repositorio
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Execute o Backend:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+cd backend
+mvn spring-boot:run
+```
 
-## Learn More
+O backend estará disponível em: [http://localhost:8080](http://localhost:8080)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Execute o Frontend (em outro terminal):**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd frontend
+npm install
+npm start
+```
 
-### Code Splitting
+O frontend abrirá automaticamente em: [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Acesse o Banco de Dados H2 (opcional):**
 
-### Analyzing the Bundle Size
+- URL: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)  
+- JDBC URL: `jdbc:h2:mem:tododb`  
+- Usuário: `sa`  
+- Senha: *(deixe em branco)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🗂️ Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+.
+├── backend/               # Código do backend (Spring Boot)
+│   ├── src/main/java/     # Código-fonte Java
+│   └── src/main/resources # Arquivos de configuração
+│
+└── frontend/              # Código do frontend (React)
+    ├── public/            # Arquivos estáticos
+    └── src/               # Código-fonte React
+        ├── components/    # Componentes reutilizáveis
+        └── services/      # Serviços de API (Axios)
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📚 Aprendizados
 
-### Deployment
+Este projeto demonstra na prática:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Criação de API RESTful com Spring Boot  
+- Operações CRUD utilizando Spring Data JPA  
+- Consumo de API com React.js  
+- Gerenciamento de estado em componentes funcionais  
+- Integração entre frontend e backend  
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Como Contribuir
+
+1. Faça um fork do projeto  
+2. Crie uma nova branch: `git checkout -b feature/sua-feature`  
+3. Commit suas alterações: `git commit -m 'Minha nova feature'`  
+4. Faça push para a sua branch: `git push origin feature/sua-feature`  
+5. Abra um Pull Request 🎉
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
+
+---
+
+## ✉️ Contato
+
+Desenvolvido por **Jadson Lago**
+
+- 📧 Email: [jadsonlago.consultoria@gmail.com](mailto:jadsonlago.consultoria@gmail.com)  
+- 💼 LinkedIn: [linkedin.com/in/jadson-lago-6a8004122](https://www.linkedin.com/in/jadson-lago-6a8004122/)
+
+---
+
+> Obrigado por conferir este projeto! Sinta-se à vontade para testar, contribuir ou sugerir melhorias. 🚀
